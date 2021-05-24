@@ -24,7 +24,7 @@ If you need it, please use [i18n Branch](https://github.com/KOwiec/tree/vue-admi
 
 ## Live demo
 
-[Preview](https://KOwiec.github.io/vue-adminLte)
+[Preview](https://kowiec.github.io/vue-adminLte)
 
 ## Preparation
 
