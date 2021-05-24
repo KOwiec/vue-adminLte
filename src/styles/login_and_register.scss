@@ -1,0 +1,37 @@
+/*
+ * Page: Login & Register - custom
+ * default see: node_modules\admin-lte\build\scss\pages\_login_and_register.scss
+ */
+$bg:#2d3a4b;
+
+.login-page,
+.register-page {
+  position: absolute;
+  height: auto !important;
+  min-height: 100%;
+  width: 100%;
+  background-color: $bg;
+}
+
+.login-box,
+.register-box {
+  width: 360px;
+}
+
+.login-logo,
+.register-logo {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 300;
+  a {
+    color: #020202;
+  }
+}
+
+#loginInfoAlert,
+#loginErrorAlert,
+#registerErrorAlert {
+  margin-top: 15px;
+}
+

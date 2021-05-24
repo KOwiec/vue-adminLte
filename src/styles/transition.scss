@@ -1,0 +1,80 @@
+// global transition css
+
+/* page */
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+/* fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* fade-component */
+.fade-component-enter-active,
+.fade-component-leave-active {
+  transition: opacity 1.5s;
+}
+
+.fade-component-enter,
+.fade-component-leave-to {
+  opacity: 0;
+}
+
+/* fade-transform */
+.fade-transform-leave-active,
+.fade-transform-enter-active {
+  transition: all .5s;
+}
+
+.fade-transform-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* fade-top */
+.fade-top-enter-active,
+.fade-top-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-top-enter,
+.fade-top-leave-to {
+  opacity: 0
+}
+
+/* breadcrumb transition */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+

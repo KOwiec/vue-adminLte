@@ -1,0 +1,93 @@
+/* custom theme color - element-admin */
+$--color-primary: #1890ff;
+$--color-success: #13ce66;
+$--color-warning: #FFBA00;
+$--color-danger: #ff4949;
+$--color-info: #1E1E1E;
+
+// custom color - element-admin
+$blue:#324157;
+$light-blue:#3A71A8;
+$light-blue-max: #b4b4bf;
+$red:#C03639;
+$pink: #E65D6E;
+$green: #30B08F;
+$tiffany: #4AB7BD;
+$yellow:#FEC171;
+$customGreen: #30B08F;
+$gray: #b0afa6;
+
+// adminlte
+$blue-lte: #0073b7;
+$lightblue: #3c8dbc;
+$navy: #001f3f;
+$teal: #39cccc;
+$olive: #3d9970;
+$lime: #01ff70;
+$orange: #ff851b;
+$fuchsia: #f012be;
+$purple: #605ca8;
+$maroon: #d81b60;
+$black: #111;
+$gray-x-light: #d2d6de;
+
+// custom sidebar see also: admin-lte/build/scss/_variables.scss
+// default adminLte- 250px ( not change)
+$sidebar-width: 250px;
+
+$sidebar-bg-dark: #27376e;
+$sidebar-bg-light: #fffed7;
+
+$sidebar-search-dark: #202f4b;
+$sidebar-search-light: #c4ffcd;
+
+$menu-bg-dark: #22374b;
+$menu-bg-light: #e6ffe1;
+
+$menu-item-dark: #140329;
+$menu-item-light: #b0ffff;
+
+$menu-text: #e1efff;
+$menu-active-text: #1f88ff;
+
+// custom Body background (Affects main content background only)
+// default adminLte - #cfd1d4
+$main-bg: #cfd1d4;
+$main-custom-bg: #d2d4c8;
+//  header color - default: $main-custom-bg
+$header-bg: #d2d4c8;
+// background for right panel
+$bg-right: #e5e7ea;
+// custom control sidebar
+// default adminLte - $control-sidebar-width: $sidebar-width;
+$control-sidebar-width: 290px;
+// custom menu icons color (demo)
+$menu-icon-color: #ff5b22;
+//custom menu icons size (demo)
+$menu-icon-size: 21px;
+//--------------------------------------------------------------------------
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  theme: $--color-info;
+  themeLight:$light-blue-max;
+  sidebarBgDark: $sidebar-bg-dark;
+  sidebarBgLight:$sidebar-bg-light;
+  sidebarSearchDark: $sidebar-search-dark;
+  sidebarSearchLight: $sidebar-search-light;
+  menuBgDark:$menu-bg-dark;
+  menuBgLight:$menu-bg-light;
+  menuItemDark:$menu-item-dark;
+  menuItemLight:$menu-item-light;
+  menuIconColor: $menu-icon-color;
+  menuIconSize: $menu-icon-size;
+  menuText: $menu-text;
+  menuActiveText: $menu-active-text;
+  mainBgColor: $main-custom-bg;
+  mainBg: $main-bg;
+  headerBg: $header-bg;
+  rightBg: $bg-right;
+  controlSidebarWidth: $control-sidebar-width;
+
+  // sidebarWidth: $sidebar-width;
+}
