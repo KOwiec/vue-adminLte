@@ -19,6 +19,8 @@ import 'overlayScrollbars-vue/dist/overlayScrollbars-vue.js'
 import 'summernote/dist/summernote-bs4.min.js'
 //daterangepicker
 import 'admin-lte/plugins/daterangepicker/daterangepicker.js'
+//bootstrap color picker
+import 'bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js'
 // jquery  overlayScrollbars ( with AdminLTE )
 import 'admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'
 //jQuery Knob Chart

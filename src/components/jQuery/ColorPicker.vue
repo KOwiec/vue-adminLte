@@ -3,8 +3,6 @@
 </template>
 
 <script>
-    //bootstrap color picker
-    import 'admin-lte/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js'
     export default {
         name: "TimePicker",
         props: {
@@ -16,6 +14,8 @@
         mounted () {
             var self = this;
             $(this.$el).colorpicker({
+                fallbackColor: '#ffffff',
+                fallbackFormat: 'hex',
                 onSelect(color) {
                     self.$emit('input', color);
                 }
@@ -27,6 +27,3 @@
     }
 </script>
 
-<style>
-    @import "~admin-lte/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css";
-</style>

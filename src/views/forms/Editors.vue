@@ -8,18 +8,6 @@
       <div class="row">
         <div class="col-md-12">
 
-          <va-card theme="info" title="Classic Editor 5" desc=" - Advanced and full of features" WidgetSet="default" :isOutline="true">
-            <div slot="content">
-              <div class="mb-3">
-                <textarea id="editor1" name="editor1" style="width: 100%">
-                  This is my textarea to be replaced with CKEditor.
-                </textarea>
-              </div>
-              <p class="text-sm mb-0">Please adhere to the <a href="https://ckeditor.com/ckeditor-5-builds/#classic" target="_blank">CKEditor</a>
-                license when using it!</p>
-            </div>
-          </va-card>
-
           <va-card theme="info" title="Summernote " desc="- Simple and fast" WidgetSet="default" :isOutline="true">
             <div slot="content">
               <div class="mb-3">
@@ -71,8 +59,6 @@
 
 <script>
     import ContentHeader from '@/layout/components/Content/ContentHeader.vue'
-    //Classic Editor
-    import ClassicEditor from '@ckeditor/ckeditor5-build-classic/build/ckeditor'
     // Codemirror
     import CodeMirror from 'codemirror/lib/codemirror.js'
     import 'codemirror/lib/codemirror.css'
@@ -94,17 +80,7 @@
             $(function () {
                 // Summernote
                 $('.textarea').summernote()
-
-                ClassicEditor
-                    .create( document.querySelector( '#editor1' ) )
-                    .then( editor => {
-                        console.log( editor );
-                    } )
-                    .catch( error => {
-                        console.error( error );
-                    });
-                })
-
+            })
          },
         mounted() {
             this.jsonEditor = CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {

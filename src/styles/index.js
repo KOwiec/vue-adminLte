@@ -11,7 +11,7 @@ import 'jquery-ui-dist/jquery-ui.min.css' // jQuery UI
 import 'sweetalert2/dist/sweetalert2.min.css' //sweet-alert2
 import "summernote/dist/summernote-bs4.css"
 import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css' // tempusdominus-bootstrap-44
-
+import "bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css"          // bootstrap-colorpicker
 // adminlte
 import 'admin-lte/plugins/overlayscrollbars/css/OverlayScrollbars.css'   // overlayscrollbars
 import 'admin-lte/plugins/icheck-bootstrap/icheck-bootstrap.min.css'  // iCheck for checkboxes and radio inputs

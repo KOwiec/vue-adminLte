@@ -277,16 +277,16 @@
           <va-card theme="info" title="Color & Time Picker">
             <div slot="content">
               <va-form>
-                <!-- Color Picker component vue-->
+                <!-- Color Picker component vue see: components/jQuery/ColorPicker.vue-->
                 <va-form-group>
                   <label>Color picker Vue-jQuery component:</label>
                   <color-picker></color-picker>
                 </va-form-group>
-
+                <!-- Color Picker see: components/jQuery/pages/advanceForm.vue, too check in input: value="09979c" -->
                 <va-form-group>
                   <label>Color picker with addon:</label>
                   <div class="input-group " id="my-colorpicker2" style="width: 50%;">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" >
                     <div class="input-group-append">
                       <span class="input-group-text"><i class="fas fa-square" id="square"></i></span>
                     </div>

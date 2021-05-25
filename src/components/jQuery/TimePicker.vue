@@ -22,8 +22,8 @@
                 }
             });
         },
-        destroyed () {
-            $(this.$el).timepicker('destroy');
-        }
+        //destroyed () {
+        //    $(this.$el).timepicker('destroy');
+        //}
     }
 </script>

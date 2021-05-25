@@ -56,7 +56,13 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'),
+                  resolve('test'),
+                  resolve('node_modules/element-ui/src'),
+                  resolve('node_modules/bootstrap-colorpicker/dist/js'),
+                  resolve('BACKEND-fake/mirage'),
+                  resolve('node_modules/overlayscrollbars-vue/dist')
+        ]
       },
       {
         test: /\.svg$/,
@@ -65,10 +71,6 @@ module.exports = {
         options: {
             symbolId: 'icon-[name]'
         }
-      },
-      {
-          test: /\.js|jsx$/, use: 'babel-loader',
-          exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

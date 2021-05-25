@@ -81,12 +81,14 @@
             });
 
             //color picker with addon ( in this case we use bootstrap-colorpicker plugin from ColorPicker.vue)
-            $('#my-colorpicker2').colorpicker();
+            $('#my-colorpicker2').colorpicker({
+                fallbackColor: '#ffffff',
+                fallbackFormat: 'hex'
+            });
 
             $('#my-colorpicker2').on('colorpickerChange', function(event) {
                 $('#square').css('color', event.color.toString());
             });
-
 
             //Timepicker 2 - moment + local + tempusdominus-bootstrap-4
             $('#timepicker').datetimepicker({
@@ -94,10 +96,5 @@
             })
 
         },
-
     }
 </script>
-
-<style scoped>
-
-</style>
