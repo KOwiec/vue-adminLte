@@ -1,2 +1,0 @@
-webpackJsonp([64],{1701:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var c={title:"Title",content:""};t.default=c}});
-//# sourceMappingURL=64.71fd39aa1ff13d3c7f4d.js.map
