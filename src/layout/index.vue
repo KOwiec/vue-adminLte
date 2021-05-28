@@ -16,7 +16,7 @@
             <back-to-top v-if="isTopBtn && !controlSidebar.opened"/>
       </div>
       <div v-else class="loading-screen">
-            <img class="loader-img" src="/static/plugins/preloaders/25.gif">
+            <img class="loader-img" src="static/preloaders/25.gif">
       </div>
 </template>
 

@@ -31,7 +31,7 @@
         data() {
             return {
                 title: 'Vue-AdminLTE  ',
-                logo: '/static/img/icons/vue2-adminlte-logo-64x64.png',
+                logo: 'static/img/icons/vue2-adminlte-logo-64x64.png',
                 alt: '',
             }
         },

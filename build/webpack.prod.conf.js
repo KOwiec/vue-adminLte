@@ -103,6 +103,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     }),
+    // split codemirror into its own file
+    new webpack.optimize.CommonsChunkPlugin({
+          async: 'codemirror',
+          minChunks(module) {
+              var context = module.context;
+              return context && (context.indexOf('codemirror') >= 0);
+        }
+    }),
     // copy custom static assets
     new CopyWebpackPlugin([
       {

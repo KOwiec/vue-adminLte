@@ -46,7 +46,7 @@
         },
         computed: {
             avatar() {
-                return this.checkAvatarUrl(this.item.avatar) ? this.item.avatar : `/static/img/${this.alt}`
+                return this.checkAvatarUrl(this.item.avatar) ? this.item.avatar : `static/img/${this.alt}`
             }
         },
         methods: {

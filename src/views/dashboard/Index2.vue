@@ -228,7 +228,7 @@
                                   <div slot="content">
                                       <ul class="users-list clearfix">
                                           <li v-for="(member, index) in members" :key="index">
-                                              <img :src="`/static/img/${member.membersImage}`" alt="User Image">
+                                              <img :src="`static/img/${member.membersImage}`" alt="User Image">
                                               <a class="users-list-name" href="#">{{member.name}}</a>
                                               <span class="users-list-date">{{member.latestDate}}</span>
                                           </li>
@@ -264,7 +264,7 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><a href="../examples/Invoice-print.html">OR9842</a></td>
+                                    <td><a href="../pages/invoice">OR9842</a></td>
                                     <td>Call of Duty IV</td>
                                     <td><span class="badge badge-success">Shipped</span></td>
                                     <td>
@@ -272,7 +272,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../examples/Invoice">OR1848</a></td>
+                                    <td><a href="../pages/invoice">OR1848</a></td>
                                     <td>Samsung Smart TV</td>
                                     <td><span class="badge badge-warning">Pending</span></td>
                                     <td>
@@ -280,7 +280,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../examples/Invoice">OR7429</a></td>
+                                    <td><a href="../pages/invoice">OR7429</a></td>
                                     <td>iPhone 6 Plus</td>
                                     <td><span class="badge badge-danger">Delivered</span></td>
                                     <td>
@@ -288,7 +288,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../examples/Invoice">OR7429</a></td>
+                                    <td><a href="../pages/invoice">OR7429</a></td>
                                     <td>Samsung Smart TV</td>
                                     <td><span class="badge badge-info">Processing</span></td>
                                     <td>
@@ -296,7 +296,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../examples/Invoice">OR1848</a></td>
+                                    <td><a href="../pages/invoice">OR1848</a></td>
                                     <td>Samsung Smart TV</td>
                                     <td><span class="badge badge-warning">Pending</span></td>
                                     <td>
@@ -304,7 +304,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../examples/Invoice">OR7429</a></td>
+                                    <td><a href="../pages/invoice">OR7429</a></td>
                                     <td>iPhone 6 Plus</td>
                                     <td><span class="badge badge-danger">Delivered</span></td>
                                     <td>
@@ -312,7 +312,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><a href="../examples/Invoice">OR9842</a></td>
+                                    <td><a href="../pages/invoice">OR9842</a></td>
                                     <td>Call of Duty IV</td>
                                     <td><span class="badge badge-success">Shipped</span></td>
                                     <td>
@@ -426,8 +426,6 @@
                           </div>
                       </va-card>
 
-
-
                       <!-- PRODUCT LIST---------------------------------------------------------- -->
                       <va-card
                               widgetSet="default"
@@ -439,7 +437,7 @@
                               <ul class="products-list product-list-in-card pl-2 pr-2">
                                   <li class="item" v-for="(product, index) in products" :key="index">
                                       <div class="product-img">
-                                          <img :src="`/static/img/${product.img}`" alt="Product Image"
+                                          <img :src="`static/img/${product.img}`" alt="Product Image"
                                                :class="`img-size-${product.imgSize}`">
                                       </div>
                                       <div class="product-info">

@@ -160,7 +160,7 @@ export const constantRoutes = [
         component: Layout,
         children: [
             {
-                path: 'https://github.com/ColorlibHQ/AdminLTE/releases',
+                path: 'https://github.com/KOwiec/vue-adminLte/releases',
                 meta: { title: 'Github Repository', icon: 'far fa-star' }
             }
         ]

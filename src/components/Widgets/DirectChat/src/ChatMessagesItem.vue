@@ -5,7 +5,7 @@
             <span class="direct-chat-timestamp" :class="isMine?'float-right':'float-left'">{{ parseDate }}</span>
         </div>
         <!-- /.direct-chat-info -->
-        <img class="direct-chat-img" :src="`/static/img/${profileImage}`" alt="Message User Image">
+        <img class="direct-chat-img" :src="`static/img/${profileImage}`" alt="Message User Image">
         <!-- /.direct-chat-img -->
         <div class="direct-chat-text">
             {{message}}

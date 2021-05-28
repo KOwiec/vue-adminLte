@@ -32,13 +32,13 @@ export function makeServer() {
         },
 
         routes() {
+            this.namespace = process.env.BASE_API;
+            this.timing = 400;
+
             // Tell Mirage to ignore unhandled requests to these domains
-            this.passthrough();
+            //this.passthrough();
 
-            this.timing = 1000;
-            this.namespace = process.env.BASE_API || '';
-
-            //-------------------------------------------- AUTHORIZATION ------------------
+           //-------------------------------------------- AUTHORIZATION ------------------
 
             // login user
             this.post("/users/authenticate", ({ db }, request) => {

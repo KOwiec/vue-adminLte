@@ -615,7 +615,7 @@
             <social-user-v2
                     name="Nadia Carmichael"
                     description="Lead Developer"
-                    profileImage="/static/img/user7-128x128.jpg"
+                    profileImage="static/img/user7-128x128.jpg"
                     :list="socialDataList[0]"
             ></social-user-v2>
           </div>
@@ -624,7 +624,7 @@
             <social-user-v1
                     name="Alexander Pierce"
                     description="Founder &amp; CEO"
-                    profileImage="/static/img/user1-128x128.jpg"
+                    profileImage="static/img/user1-128x128.jpg"
                     :infoList="socialDataList[1]"
             ></social-user-v1>
           </div>
@@ -633,7 +633,7 @@
             <social-user-v1
                     name="Elizabeth Pierce"
                     description="Web Designer"
-                    profileImage="/static/img/user3-128x128.jpg"
+                    profileImage="static/img/user3-128x128.jpg"
                     :infoList="socialDataList[2]"
                     :isBackgroundImage="true"
                     BackgroundImage="/static/img/photo1.png"
@@ -708,10 +708,10 @@
                 socialBoxList: [
                     {
                         name: 'Jonathan Burke Jr.',
-                        profileImage: '/static/img/user1-128x128.jpg',
+                        profileImage: 'static/img/user1-128x128.jpg',
                         description: 'Shared publicly - 7:30 PM Today',
                         images: [
-                            '/static/img/photo2.png'
+                            'static/img/photo2.png'
                         ],
                         text: 'I took this photo this morning. What do you guys think?',
                         buttons: [
@@ -731,13 +731,13 @@
                         comments: [
                             {
                                 name: 'Maria Gonzales',
-                                profileImage: '/static/img/user3-128x128.jpg',
+                                profileImage: 'static/img/user3-128x128.jpg',
                                 text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                                 date: new Date()
                             },
                             {
                                 name: 'Luna Stark',
-                                profileImage: '/static/img/user4-128x128.jpg',
+                                profileImage: 'static/img/user4-128x128.jpg',
                                 text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                                 date: new Date()
                             }
@@ -745,7 +745,7 @@
                     },
                     {
                         name: 'Jonathan Burke Jr.',
-                        profileImage: '/static/img/user1-128x128.jpg',
+                        profileImage: 'static/img/user1-128x128.jpg',
                         description: 'Shared publicly - 7:30 PM Today',
                         text: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.',
                         buttons: [
@@ -765,13 +765,13 @@
                         comments: [
                             {
                                 name: 'Maria Gonzales',
-                                profileImage: '/static/img/user3-128x128.jpg',
+                                profileImage: 'static/img/user3-128x128.jpg',
                                 text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
                                 date: new Date()
                             },
                             {
                                 name: 'Nora Havisham',
-                                profileImage: '/static/img/user5-128x128.jpg',
+                                profileImage: 'static/img/user5-128x128.jpg',
                                 text: `The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
                                 date: new Date()
                             }
@@ -779,7 +779,7 @@
                         attachments: [
                             {
                                 title: 'Lorem ipsum text generator',
-                                image: '/static/img/photo1.png',
+                                image: 'static/img/photo1.png',
                                 text: 'Description about the attachment can be placed here. Lorem Ipsum is simply dummy text of the printing and typesetting industry...'
                             }
                         ]

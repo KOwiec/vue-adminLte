@@ -11,6 +11,8 @@ const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
 const webpackConfig = require('./webpack.prod.conf')
+var connect = require('connect');
+var serveStatic = require('serve-static')
 
 const spinner = ora('building for production...')
 spinner.start()
@@ -33,5 +35,20 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       '  Tip: built files are meant to be served over an HTTP server.\n' +
       '  Opening index.html over file:// won\'t work.\n'
     ))
+    // for script in package.json -  "build:preview"
+    if (process.env.npm_config_preview) {
+          const port = 8080
+          const host = "http://localhost:" + port
+          const basePath = config.build.assetsPublicPath
+          const app = connect()
+
+          app.use(basePath, serveStatic('./dist', {
+              'index': ['index.html', '/']
+          }))
+
+          app.listen(port, function () {
+              console.log(chalk.green(`> Listening at  http://localhost:${port}${basePath}`))
+          });
+    }
   })
 })

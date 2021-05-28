@@ -1,7 +1,7 @@
 <template>
     <!-- Message Start -->
     <div class="media">
-        <img :src="`/static/img/${item.user.image}`" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+        <img :src="`static/img/${item.user.image}`" alt="User Avatar" class="img-size-50 mr-3 img-circle">
         <div class="media-body">
             <h3 class="dropdown-item-title">
                 {{item.user.firstName + ' ' + item.user.lastName}}

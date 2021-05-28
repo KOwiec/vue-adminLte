@@ -116,7 +116,7 @@
         data() {
             return {
                 title: 'Vue-AdminLTE-3  ',
-                logo: '/static/img/icons/vue2-adminlte-logo-128x128.png',
+                logo: 'static/img/icons/vue2-adminlte-logo-128x128.png',
                 alt: 'Vue-AdminLTE3 Logo',
                 headers: [
                     {text:'Full Name', value:'fullName'},

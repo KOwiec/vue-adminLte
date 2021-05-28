@@ -93,7 +93,7 @@
         },
         computed: {
             getAvatar() {
-                return `/static/img/${this.user.avatar}`
+                return `static/img/${this.user.avatar}`
             }
         },
     }

@@ -58,7 +58,7 @@
                 return this.testUser.createdAt.toDateString()
             },
             getImage() {
-                return `/static/img/${this.testUser.image}`
+                return `static/img/${this.testUser.image}`
             },
             imageObj() {
                 return this.image = { src: this.getImage, alt: this.testUser.position, }  // text: this.testUser.name

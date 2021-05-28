@@ -2,7 +2,7 @@
     <transition name="fade-component" mode="out-in">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img :src="`/static/img/${testUser.image}`"
+                <img :src="`static/img/${testUser.image}`"
                      class="img-circle elevation-2" :alt="testUser.position">
             </div>
             <div class="info">

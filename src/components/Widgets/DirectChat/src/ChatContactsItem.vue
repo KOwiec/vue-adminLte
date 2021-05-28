@@ -1,7 +1,7 @@
 <template>
             <li>
                 <a href="javascript:void(0);">
-                    <img class="contacts-list-img" :src="`/static/img/${profileImage}`">
+                    <img class="contacts-list-img" :src="`static/img/${profileImage}`">
 
                     <div class="contacts-list-info">
                           <span class="contacts-list-name">

@@ -89,10 +89,10 @@
                                 contentSlot: true,
                                 type: 'image',
                                 images:  [
-                                    '/static/img/photo1.png',
-                                    '/static/img/photo2.png',
-                                    '/static/img/photo3.jpg',
-                                    '/static/img/photo4.jpg',
+                                    'static/img/photo1.png',
+                                    'static/img/photo2.png',
+                                    'static/img/photo3.jpg',
+                                    'static/img/photo4.jpg',
                                 ],
                             },
                             {
