@@ -1,7 +1,7 @@
 <template>
     <transition name="fade-component" mode="out-in">
         <div  class="sidebar-footer mt-3 pb-3" :class="line">
-            <!-- Sidebar Footer (AdminLte)-->
+
             <va-button-group class="block" >
                 <va-button theme="danger" icon="el-icon-warning" title="errors"
                            :style="customTheme"
@@ -16,6 +16,8 @@
                 <va-button theme="primary" icon="el-icon-printer" title="print"
                            :style="customTheme"
                            @btn-click="handlePrint"/>
+
+                <!-- Sidebar Footer dropdawn (AdminLte)-->
                 <template v-if="isDefault">
                    <va-button  theme="primary" icon="fas fa-bars"
                                title="more" :isDropdown="true"
@@ -23,16 +25,18 @@
                    <va-dropdown
                              :dropdownList="List"
                              location="right"
+                             @dropdown-item-click="handleItemClick"
                    />
                 </template>
-                <!-- Sidebar Footer (with ElementUI)-->
+
+                <!-- Sidebar Footer dropdown (with ElementUI)-->
                 <div v-else>
                   <el-dropdown  trigger="click">
                      <va-button theme="primary" icon="el-icon-more"
                                 title="more"
                                 :style="customTheme"/>
                      <el-dropdown-menu slot="dropdown">
-                         <a href="#" @click="$Swal.fire('not available now!')">
+                         <a href="javascript:void(0);" @click="$Swal.fire('not available now!')">
                              <el-dropdown-item icon="el-icon-question">Help</el-dropdown-item>
                          </a>
                          <a target="_blank" href="https://element.eleme.io/#/en-US/component/dropdown">
@@ -41,7 +45,7 @@
                          <router-link to="/dashboards">
                              <el-dropdown-item icon="el-icon-circle-check" >Dashboard v.1</el-dropdown-item>
                          </router-link>
-                         <a href="#" @click="handleInfo">
+                         <a href="javascript:void(0);" @click="handleInfo">
                              <el-dropdown-item icon="el-icon-info" divided>Info</el-dropdown-item>
                          </a>
                      </el-dropdown-menu>
@@ -75,11 +79,11 @@
                 infoDialog: false,
                 printDialog: false,
                 List: [
-                    {  link: '#', text: 'Help', icon:'far fa-lightbulb'  },
+                    {  link: '#', text: 'Help', name: 'help', icon:'far fa-lightbulb'  },
                     {  link: 'https://adminlte.io/docs/3.0/components/main-sidebar.html', text: 'Main Sidebar', icon:'far fa-check-circle'  },
                     {  router: {name: 'DashboardV1'}, text: 'Dashboard v.1', icon: 'fas fa-tachometer-alt' },
                     {  isDivider: true },
-                    {  link: '#', text: 'Info', icon:'fas fa-info-circle' },
+                    {  link: '#', text: 'Info', name: 'info', icon:'fas fa-info-circle' },
                 ],
             }
         },
@@ -115,6 +119,14 @@
             },
             handlePrint() {
                 this.printDialog = true
+            },
+            handleItemClick(name) {
+                if (name && name === 'help') {
+                    this.$Swal.fire('not available now!')
+                } else if(name && name === 'info') {
+                    this.infoDialog = true
+                }
+                return false
             },
         },
         created() {

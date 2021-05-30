@@ -79,6 +79,7 @@
                 currentSortDir: 'asc',
                 currentPage: 1,
                 currentFilter: '',
+                sData: null
             }
         },
         props: {
@@ -112,10 +113,9 @@
             getData() {
                 return this.sorted ? this.sortedData : this.data
             },
-            // error: infinite update loop in a component render function - todo
             sortedData() {
                 // sort data
-                return this.data.sort((a,b) => {
+                return this.data.slice().sort((a,b) => {
                     let modifier = 1;
                     if(this.currentSortDir === 'desc') modifier = -1;
                     // for html in table
@@ -189,7 +189,3 @@
         }
     }
 </script>
-
-<style>
-
-</style>

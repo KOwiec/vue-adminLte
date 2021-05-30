@@ -623,19 +623,19 @@
                     name: 'carouselExampleIndicators',
                     list: [
                         {
-                            image: '/static/img/photo1.png',
+                            image: 'static/img/photo1.png',
                             text: 'First Slide'
                         },
                         {
-                            image: '/static/img/photo2.png',
+                            image: 'static/img/photo2.png',
                             text: 'Second Slide'
                         },
                         {
-                            image: '/static/img/photo3.jpg',
+                            image: 'static/img/photo3.jpg',
                             text: 'Third Slide'
                         },
                         {
-                            image: '/static/img/photo4.jpg',
+                            image: 'static/img/photo4.jpg',
                             text: 'Fourth Slide'
                         }
                     ]

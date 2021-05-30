@@ -297,9 +297,9 @@
                   <!-- time Picker component vue-->
                   <div class="bootstrap-timepicker">
                     <label>Time picker Vue-jQuery component:</label>
-                    <div class="input-group" style="width: 50%;">
+                    <va-input-group styled="width: 50%;">
                       <time-picker></time-picker>
-                    </div>
+                    </va-input-group>
                   </div>
                 </va-form-group>
 
@@ -348,7 +348,7 @@
                   <va-input-group
                           groupType="input"
                           id="reservation">
-                    <va-input name="reservation"/>
+                    <va-input id="reservation"/>
                     <i slot="slotPrefixAddonText" class="far fa-calendar-alt"></i>
                   </va-input-group>
                 </va-form-group>
@@ -359,7 +359,7 @@
                   <va-input-group
                           groupType="input"
                           id="reservationtime">
-                    <va-input name="reservationtime"/>
+                    <va-input id="reservationtime"/>
                     <i slot="slotPrefixAddonText" class="far fa-clock"></i>
                   </va-input-group>
                 </va-form-group>
@@ -369,8 +369,9 @@
                   <label>Date range button:</label>
                   <va-input-group
                           groupType="input"
+                          styled="width: 50%; text-align: center"
                           id="daterange-input">
-                    <va-input name="daterange-input"/>
+                    <va-input id="daterange-input" />
                     <va-button slot="slotPrefixButton"
                                icon="far fa-calendar-alt"
                                name="Date range picker"
@@ -384,7 +385,7 @@
                 <!-- Date range -->
                 <va-form-group>
                   <label>Predefinied Date ranges:</label>
-                  <div id="reportrange" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                  <div id="reportrange" style="background: #f9ebaa; cursor: pointer; padding: 5px 10px; border: 1px solid #cc7d7f; width: 35%">
                     <i class="far fa-calendar-alt"></i>&nbsp;
                     <span></span> <i class="fa fa-caret-down"></i>
                   </div>
@@ -684,7 +685,3 @@
         }
     }
 </script>
-
-<style>
-
-</style>
