@@ -20,7 +20,7 @@
 **vue-adminlte** is administration panel based on **[Vue.js](https://github.com/vuejs/vue)**, **[AdminLTE](https://github.com/ColorlibHQ/AdminLTE)** bootstrap template, and **[Element-UI](https://github.com/ElemeFE/element)**, UI Toolkit.
 Many Javascript code is base on [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/). The current version is `v1.0.0` build on `webpack 3+`.
 This version not support [Vue I18n](https://kazupon.github.io/vue-i18n/) internationalization plugin for Vue.js.
-If you need it, please use [i18n Branch](https://github.com/KOwiec/tree/vue-adminLte-lang).
+If you need it, please use [lang Branch](https://github.com/KOwiec/vue-adminLte/tree/lang).
 
 ## Live demo
 
