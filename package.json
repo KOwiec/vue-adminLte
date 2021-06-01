@@ -20,8 +20,7 @@
     "svgo": "svgo -f src/components/SvgIcon/svg --config=src/components/SvgIcon/svgo.yml",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/e2e/specs",
-    "deploy": "sh scripts/deploy.sh"
+    "lint": "eslint --ext .js,.vue src test/e2e/specs"
   },
   "keywords": [
     "vue",
