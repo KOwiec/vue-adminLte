@@ -21,7 +21,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs",
-    "deploy": "sh scripts/deploy.sh"
+    "deploy": "sh deploy.sh"
   },
   "keywords": [
     "vue",
