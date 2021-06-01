@@ -15,7 +15,9 @@ const state = {
   },
   rightPanel: {
       opened: Cookies.get(RIGHT_PANEL) ? !!+Cookies.get(RIGHT_PANEL) : false,
-  }
+  },
+  language: Cookies.get('language') || 'en',
+  size: Cookies.get('size') || 'medium'
 };
 
 const actions = {
@@ -57,6 +59,12 @@ const actions = {
 
     openRightPanel({ commit }) {
         commit('OPEN_RIGHT_PANEL')
+    },
+    setLanguage({ commit }, language) {
+        commit('SET_LANGUAGE', language)
+    },
+    setSize({ commit }, size) {
+        commit('SET_SIZE', size)
     }
 };
 
@@ -123,6 +131,14 @@ const mutations = {
     OPEN_RIGHT_PANEL : state => {
         Cookies.set(RIGHT_PANEL, 1, { sameSite: 'strict' });
         state.rightPanel.opened = true
+    },
+    SET_LANGUAGE: (state, language) => {
+        state.language = language
+        Cookies.set('language', language, { sameSite: 'strict' })
+    },
+    SET_SIZE: (state, size) => {
+        state.size = size
+        Cookies.set('size', size, { sameSite: 'strict' })
     }
 };
 

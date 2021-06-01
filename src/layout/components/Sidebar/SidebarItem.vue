@@ -11,7 +11,7 @@
                        <item :icon="onlyOneChild.meta.icon || (item.meta && item.meta.icon)"
                              :iconActive="onlyOneChild.meta.iconActive"
                              :index="resolvePath(onlyOneChild.path)"
-                             :title="onlyOneChild.meta.title"
+                             :title="generateTitle(onlyOneChild.meta.title)"
                              :badge="onlyOneChild.meta.badge"
                              :isOneChild="onlyOneChild.isOneChild"
                        />
@@ -30,7 +30,7 @@
 
                       <item :icon="item.meta && item.meta.icon"
                             :iconActive="item.meta.iconActive"
-                            :title="item.meta.title"
+                            :title="generateTitle(item.meta.title)"
                             :badge="item.meta.badge"
                             :has-treeview="true"
                        />
@@ -50,6 +50,7 @@
 
 <script>
     import path from 'path'
+    import { generateTitle } from '@/utils/i18n'
     import { isExternal } from '@/utils/validate'
     import Item from './Item'
     import AppLink from './Link'
@@ -75,6 +76,7 @@
         },
 
         methods: {
+            generateTitle,
             hasOneShowingChild(children = [], parent) {
                 const showingChildren = children.filter(item => {
                     if (item.hidden) {

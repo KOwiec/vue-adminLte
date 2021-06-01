@@ -33,6 +33,7 @@
     import {  mapGetters, mapActions } from 'vuex'
     import { isExternalLink, isLabel, isHeader } from '@/utils/validate'
     import path from 'path'
+    import { generateTitle } from '@/utils/i18n'
 
     export default {
         name: "LeftNavbar",
@@ -99,6 +100,7 @@
             },
         },
         methods: {
+            generateTitle,
             ...mapActions({
                 openSidebar: 'app/openSidebar',
                 closeSidebar: 'app/closeSidebar',
@@ -129,7 +131,7 @@
                     }
                     // prepare data for dropdown with language
                     const data = {
-                        text: route.meta && route.meta.title,
+                        text: route.meta && this.generateTitle(route.meta.title),
                         router: { name: route.name },
                         path: path.resolve(basePath, route.path),
                     }

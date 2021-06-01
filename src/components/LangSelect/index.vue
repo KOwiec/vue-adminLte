@@ -1,8 +1,8 @@
 <template>
   <va-nav-dropdown
           id="LanguageDropdownMenu"
-          title="languages"
-          icon="fas fa-globe">
+          :title="$t('navbar.lang')"
+          :icon="icon">
       <va-dropdown-menu >
           <va-dropdown-item v-for="(item, index) in languages"
                         :key="index"
@@ -18,6 +18,9 @@
 export default {
     name: "LangSelect",
     componentName: 'LangSelect',
+    props: {
+        icon: { type: String, default: 'fas fa-globe' },
+    },
     data() {
         return {
             languages: [
@@ -33,6 +36,8 @@ export default {
                     text: 'Polish',
                     name: 'pl'
                 },
+            ],
+            otherLang: [
                 {
                     icon: 'flag-icon flag-icon-de mr-2',
                     link: '#',
@@ -66,7 +71,7 @@ export default {
                 this.$i18n.locale = lang
                 this.$store.dispatch('app/setLanguage', lang)
                 this.$message({
-                    message: 'Switch Language Success',
+                    message: this.$t('components.langSelect.message'),
                     type: 'success'
                 })
             }

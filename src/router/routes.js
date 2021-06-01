@@ -97,7 +97,7 @@ export const constantRoutes = [
                 path: 'widgets',
                 component: () => import('@/views/widgets/Widgets'),
                 name: 'Widgets',
-                meta: { title: 'Widgets', icon: 'fa fa-th', topBtn: true,  badge: { type: 'String', data: 'new' } }
+                meta: { title: 'widgets', icon: 'fa fa-th', topBtn: true,  badge: { type: 'String', data: 'new' } }
             }
         ]
     },
@@ -113,7 +113,7 @@ export const constantRoutes = [
                 path: 'index',
                 name: 'Profile',
                 component: () => import('@/views/profile/index'),
-                meta: { title: 'Profile', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'profile', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
         ]
     },
@@ -129,7 +129,7 @@ export const constantRoutes = [
                 path: 'index',
                 component: () => import('@/views/calendar/Calendar'),
                 name: 'Calendar',
-                meta: { title: 'Calendar', icon: 'fas fa-calendar-alt',  badge: { type: 'Number', data: 2 } }
+                meta: { title: 'calendar', icon: 'fas fa-calendar-alt',  badge: { type: 'Number', data: 2 } }
             }
         ]
     },
@@ -142,7 +142,7 @@ export const constantRoutes = [
     tablesRouter,
     {
         path: '/header/examples',
-        meta: { title: 'EXAMPLES' }
+        meta: { title: 'examples' }
     },
 
     mailboxRouter,
@@ -153,7 +153,7 @@ export const constantRoutes = [
 
     {
         path: '/header/misc',
-        meta: { title: 'MISCELLANEOUS' }
+        meta: { title: 'miscellaneous' }
     },
     {
         path: '/external-link/admin-lte',
@@ -161,31 +161,31 @@ export const constantRoutes = [
         children: [
             {
                 path: 'https://github.com/KOwiec/vue-adminLte/releases',
-                meta: { title: 'Github Repository', icon: 'far fa-star' }
+                meta: { title: 'githubRepo', icon: 'far fa-star' }
             }
         ]
     },
     miscRouter,
     {
         path: '/header/multi',
-        meta: { title: 'MULTI LEVEL EXAMPLE' }
+        meta: { title: 'multiLevelExample' }
     },
     nestedRouter,
     {
         path: '/header/labels',
-        meta: { title: 'LABELS' }
+        meta: { title: 'labels' }
     },
     {
         path: '/label/important',
-        meta: { title: 'Important', icon: 'far fa-circle text-danger'}
+        meta: { title: 'important', icon: 'far fa-circle text-danger'}
     },
     {
         path: '/label/warning',
-        meta: { title: 'Warning', icon: 'far fa-circle text-warning'}
+        meta: { title: 'warning', icon: 'far fa-circle text-warning'}
     },
     {
         path: '/label/info',
-        meta: { title: 'Info', icon: 'far fa-circle text-info'}
+        meta: { title: 'info', icon: 'far fa-circle text-info'}
     },
 
 ];
@@ -203,7 +203,7 @@ export const asyncRoutes = [
         name: 'Permission',
         meta: {
             bodyClass: 'sidebar-mini layout-fixed',
-            title: 'Permission',
+            title: 'permission',
             icon: 'fas fa-lock',
             roles: ['admin'] // you can set roles in root nav
             // Use  ['admin', 'user'] if wanna make one of the sub nav available for user role
@@ -214,7 +214,7 @@ export const asyncRoutes = [
                 component: () => import('@/views/permission/page'),
                 name: 'PagePermission',
                 meta: {
-                    title: 'Page Permission',
+                    title: 'pagePermission',
                     icon: 'far fa-circle',
                     iconActive: 'far fa-dot-circle',
                     roles: ['admin']   // or you can only set roles in sub nav.
@@ -226,7 +226,7 @@ export const asyncRoutes = [
                 component: () => import('@/views/permission/role'),
                 name: 'RolePermission',
                 meta: {
-                    title: 'Role Permission',
+                    title: 'rolePermission',
                     icon: 'far fa-circle',
                     iconActive: 'far fa-dot-circle',
                     roles: ['admin']

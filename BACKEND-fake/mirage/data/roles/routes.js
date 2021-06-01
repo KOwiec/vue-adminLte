@@ -44,15 +44,15 @@ export const constantRoutes = [
     {
         path: '/',
         component: 'layout/Layout',
-        redirect: '/widgets',
-        name: 'widgets',
+        redirect: 'widgets',
+        name: 'Widgets',
         meta: { bodyClass: 'sidebar-mini layout-fixed'},
         children: [
             {
                 path: 'widgets',
                 component: 'views/widgets/Widgets',
                 name: 'Widgets',
-                meta: { title: 'Widgets', icon: 'fa fa-th', topBtn: true, badge: {type: 'String', data: 'new'} }
+                meta: { title: 'widgets', icon: 'fa fa-th', topBtn: true, badge: {type: 'String', data: 'new'} }
             }
         ]
     },
@@ -67,7 +67,7 @@ export const constantRoutes = [
                 path: 'index',
                 name: 'Profile',
                 component: 'views/profile/index',
-                meta: { title: 'Profile', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'profile', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             }
         ]
     },
@@ -75,7 +75,6 @@ export const constantRoutes = [
         path: '/calendar',
         component: 'layout/Layout',
         redirect: '/calendar/index',
-        name: 'calendar',
         meta: { bodyClass: 'sidebar-mini layout-fixed' },
         hidden: true,
         children: [
@@ -84,7 +83,7 @@ export const constantRoutes = [
                 component: 'views/calendar/Calendar',
                 name: 'Calendar',
                 meta: {
-                    title: 'Calendar',
+                    title: 'calendar',
                     icon: 'fas fa-calendar-alt',
                     badge: { type: 'Number', data: 2 }
                 }
@@ -94,29 +93,29 @@ export const constantRoutes = [
     {
         path: '/dashboards',
         redirect: '/dashboards/dashboard-v1',
-        name: 'dashboards',
+        name: 'Dashboards',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed',  title: 'Dashboards', icon: 'fas fa-tachometer-alt' },
+        meta: { bodyClass: 'sidebar-mini layout-fixed',  title: 'dashboards', icon: 'fas fa-tachometer-alt' },
         children: [
             {
                 path: 'dashboard-v1',
                 name: 'DashboardV1',
                 component: 'views/dashboard/Index',
-                meta: { title: 'Dashboard v.1', bodyClass: 'layout-navbar-fixed ',  icon: 'far fa-circle',
+                meta: { bodyClass: 'layout-navbar-fixed ', title: 'dashboardV1', icon: 'far fa-circle',
                     iconActive: 'far fa-dot-circle', topBtn: true }
             },
             {
                 path: 'dashboard-v2',
                 name: 'DashboardV2',
                 component: 'views/dashboard/Index2',
-                meta: { title: 'Dashboard v.2', bodyClass: 'layout-navbar-fixed layout-footer-fixed',
+                meta: { bodyClass: 'layout-navbar-fixed layout-footer-fixed', title: 'dashboardsV2',
                     icon: 'far fa-circle', iconActive: 'far fa-dot-circle', topBtn: true }
             },
             {
                 path: 'dashboard-v3',
                 name: 'DashboardV3',
                 component: 'views/dashboard/Index3',
-                meta: { title: 'Dashboard v.3', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'dashboardsV3', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
         ]
     },
@@ -132,7 +131,7 @@ export const asyncRoutes = [
         name: 'Permission',
         meta: {
             bodyClass: 'sidebar-mini layout-fixed',
-            title: 'Permission',
+            title: 'permission',
             icon: 'fas fa-lock',
             roles: ['admin']
         },
@@ -141,13 +140,13 @@ export const asyncRoutes = [
                 path: 'page',
                 component: 'views/permission/page',
                 name: 'PagePermission',
-                meta: { title: 'Page Permission', icon: 'far fa-circle', iconActive: 'far fa-dot-circle', roles: ['admin'] }
+                meta: { title: 'pagePermission', icon: 'far fa-circle', iconActive: 'far fa-dot-circle', roles: ['admin'] }
             },
             {
                 path: 'role',
                 component: 'views/permission/role',
                 name: 'RolePermission',
-                meta: { title: 'Role Permission', icon: 'far fa-circle', iconActive: 'far fa-dot-circle', roles: ['admin'] }
+                meta: { title: 'rolePermission', icon: 'far fa-circle', iconActive: 'far fa-dot-circle', roles: ['admin'] }
             },
         ]
     },
@@ -156,43 +155,43 @@ export const asyncRoutes = [
         name: 'Layouts',
         component: 'layout/Layout',
         redirect: 'noRedirect',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Layout Options', icon: 'fas fa-copy' },
+        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'layoutOpts', icon: 'fas fa-copy' },
         children: [
             {
                 path: 'top-nav',
                 name: 'TopNav',
                 component: 'views/layouts/TopNavigation',
-                meta: { bodyClass: '!sidebar-collapse layout-top-nav layout-fixed', icon: 'far fa-circle text-danger', title: 'Top Navigation' }
+                meta: { title: 'topNav', bodyClass: '!sidebar-collapse layout-top-nav layout-fixed', icon: 'far fa-circle text-danger' }
             },
             {
                 path: 'boxed',
                 name: 'Boxed',
                 component: '@/views/layouts/Boxed',
-                meta: { bodyClass: ' layout-boxed', icon: 'far fa-circle text-info', title: 'Boxed' }
+                meta: { title: 'boxed', bodyClass: ' layout-boxed', icon: 'far fa-circle text-info' }
             },
             {
                 path: 'fixed',
                 name: 'Fixed',
                 component: 'views/layouts/Fixed',
-                meta: {  icon: 'far fa-circle text-info', title: 'Fixed Sidebar' }
+                meta: { title: 'fixedSidebar' ,icon: 'far fa-circle text-info' }
             },
             {
                 path: 'fixed-navbar',
                 name: 'FixedNavbar',
                 component: 'views/layouts/FixedNavbar',
-                meta: { bodyClass: 'layout-navbar-fixed', icon: 'far fa-circle text-info', title: 'Fixed Navbar' }
+                meta: { title: 'fixedNavbar', bodyClass: 'layout-navbar-fixed', icon: 'far fa-circle text-info' }
             },
             {
                 path: 'fixed-footer',
                 name: 'FixedFooter',
                 component: 'views/layouts/FixedFooter',
-                meta: { bodyClass: 'layout-footer-fixed', icon: 'far fa-circle text-info', title: 'Fixed Footer' }
+                meta: { title: 'fixedFooter', bodyClass: 'layout-footer-fixed', icon: 'far fa-circle text-info' }
             },
             {
                 path: 'collapsed-sidebar',
                 name: 'CollapsedSidebar',
                 component: 'views/layouts/CollapsedSidebar',
-                meta: { bodyClass: 'sidebar-collapse', icon: 'far fa-circle text-info', title: 'Collapsed Sidebar' }
+                meta: { title: 'collapsedSidebar', bodyClass: 'sidebar-collapse', icon: 'far fa-circle text-info' }
             },
 
         ]
@@ -202,37 +201,37 @@ export const asyncRoutes = [
         name: 'Charts',
         redirect: '/charts/chartjs',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Charts', icon: 'fa fa-pie-chart', makeCollections: true },
+        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'charts', icon: 'fa fa-pie-chart', makeCollections: true },
         children: [
             {
                 path: 'chartjs',
                 name: 'Chartjs',
                 component: 'views/charts/Chartjs',
-                meta: { title: 'ChartJS', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'chartJS', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'chartjs-2',
                 name: 'Chartjs2',
                 component: 'views/charts/Chartjs2',
-                meta: { title: 'ChartJS 10 examples', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'chartJS10', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'flot',
                 name: 'Flot',
                 component: 'views/charts/Flot',
-                meta: { title: 'Flot', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'flot', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'inline',
                 name: 'Inline',
                 component: 'views/charts/Inline',
-                meta: { title: 'Inline', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'inline', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
-                path: 'chartjs-comp',
+                path: 'chartjs-vue',
                 name: 'ChartjsVue',
                 component: 'views/charts/ChartjsComp',
-                meta: { title: 'ChartJS Vue', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'chartVue', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
 
         ]
@@ -240,100 +239,100 @@ export const asyncRoutes = [
     {
         path: '/elements',
         name: 'Elements',
-        redirect: 'noRedirect',
+        redirect: '/elements/general-ui',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'UI Elements', icon: 'fa fa-tree',
+        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'elements', icon: 'fa fa-tree',
             badge: { type: 'Number', data: 6 }},
         children: [
             {
-                path: 'general',
+                path: 'general-ui',
                 name: 'GeneralUi',
                 component: 'views/elements/General',
-                meta: { title: 'General', icon: 'far fa-circle', iconActive: 'far fa-dot-circle', topBtn: true }
+                meta: { title: 'general', icon: 'far fa-circle', iconActive: 'far fa-dot-circle', topBtn: true }
             },
             {
                 path: 'icons',
                 name: 'Icons',
                 component: 'views/elements/Icons/index.vue',
-                meta: { title: 'Icons', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'icons', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'buttons',
                 name: 'Buttons',
                 component: 'views/elements/Buttons/index.vue',
-                meta: { title: 'Buttons', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'buttons', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'sliders',
                 name: 'Sliders',
                 component: 'views/elements/Sliders',
-                meta: { title: 'Sliders', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'sliders', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'timeline',
                 name: 'Timeline',
                 component: 'views/elements/Timeline',
-                meta: { title: 'Timeline', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'timeline', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'modals',
                 name: 'Modals',
                 component: 'views/elements/Modals',
-                meta: { title: 'Modals & Alerts', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'modalAlert', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'tabs',
                 name: 'Tabs',
                 component: '/views/elements/Tabs',
-                meta: { title: 'Tabs', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'tabs', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
         ]
     },
     {
         path: '/forms',
         name: 'Forms',
-        redirect: 'noRedirect',
+        redirect: '/forms/general-forms',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Forms', icon: 'fa fa-edit' },
+        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'forms', icon: 'fa fa-edit' },
         children: [
             {
-                path: 'general',
+                path: 'general-forms',
                 name: 'GeneralForms',
                 component: 'views/forms/General',
-                meta: { title: 'General Elements', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'generalForms', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
-                path: 'advance',
+                path: 'advance-elements',
                 name: 'AdvanceElements',
                 component: 'views/forms/Advance',
-                meta: { title: 'Advanced Elements', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'advanceElements', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'editors',
                 name: 'Editors',
                 component: 'views/forms/Editors',
-                meta: { title: 'Editors', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'editors', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             }
         ]
     },
     {
         path: '/tables',
         name: 'Tables',
-        redirect: 'noRedirect',
+        redirect: '/tables/simple-table',
         component: 'layout/Layout',
-        meta:{ bodyClass: 'sidebar-mini layout-fixed', title: 'Tables', icon: 'fa fa-table' },
+        meta:{ bodyClass: 'sidebar-mini layout-fixed', title: 'tables', icon: 'fa fa-table' },
         children: [
             {
                 path: 'simple-table',
                 name: 'SimpleTable',
                 component: 'views/tables/Simple',
-                meta: { title: 'Simple Tables', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'simpleTable', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'data-table',
                 name: 'DataTable',
                 component: 'views/tables/Data',
-                meta: { title: 'Data Tables', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'dataTable', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'jsgrid-table',
@@ -345,32 +344,32 @@ export const asyncRoutes = [
     },
     {
         path: '/header/examples',
-        meta: { title: 'EXAMPLES' }
+        meta: { title: 'examples' }
     },
     {
         path: '/mailbox',
         name: 'Mailbox',
-        redirect: 'noRedirect',
+        redirect: '/mailbox/inbox',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Mailbox', icon: 'fas fa-envelope' },
+        meta: { title: 'mailbox', bodyClass: 'sidebar-mini layout-fixed', icon: 'fas fa-envelope' },
         children: [
             {
                 path: 'inbox',
                 name: 'Inbox',
                 component: 'views/mailbox/Inbox',
-                meta: { title: 'Inbox', icon: 'far fa-circle' , iconActive: 'far fa-dot-circle'}
+                meta: { title: 'inbox', icon: 'far fa-circle' , iconActive: 'far fa-dot-circle'}
             },
             {
                 path: 'compose',
                 name: 'Compose',
                 component: 'views/mailbox/Compose',
-                meta: { title: 'Compose', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'compose', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
-                path: 'read',
+                path: 'read-mail',
                 name: 'ReadMail',
                 component: 'views/mailbox/Read',
-                meta: { title: 'Read', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'read', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             }
         ]
     },
@@ -379,19 +378,19 @@ export const asyncRoutes = [
         name: 'Pages',
         redirect: 'noRedirect',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Pages', icon: 'fas fa-book' },
+        meta: { title: 'pages', bodyClass: 'sidebar-mini layout-fixed', icon: 'fas fa-book' },
         children: [
             {
                 path: 'invoice',
                 name: 'Invoice',
                 component: 'views/pages/Invoice',
-                meta: { bodyClass: '!sidebar-collapse layout-top-nav layout-fixed', title: 'Invoice', icon: 'far fa-circle text-danger', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'invoice', bodyClass: '!sidebar-collapse layout-top-nav layout-fixed', icon: 'far fa-circle text-danger', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'project',
                 name: 'Project',
                 component: () => 'views/pages/Project',
-                meta: { title: 'Project', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'project', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
         ]
     },
@@ -400,67 +399,67 @@ export const asyncRoutes = [
         name: 'Extras',
         redirect: 'noRedirect',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Extras', icon: 'fas fa-plus-square' },
+        meta: { title: 'extras', bodyClass: 'sidebar-mini layout-fixed', icon: 'fas fa-plus-square' },
         children: [
             {
                 path: 'login',
                 name: 'Login',
                 component: 'views/examples/Login',
-                meta: { title: 'Login', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'login', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'register',
                 name: 'Register',
                 component: 'views/examples/Register',
-                meta: { title: 'Register', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'register', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'forgot-password',
                 name: 'ForgotPassword',
                 component: 'views/examples/forgot-password',
-                meta: { title: 'Forgot Password', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'forgotPass', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'recover-password',
                 name: 'RecoverPassword',
                 component: 'views/examples/recover-password',
-                meta: {  title: 'Recover Password', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: {  title: 'recoverPass', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'lockscreen',
-                name: 'Lockscreen',
+                name: 'Lckscreen',
                 component: 'views/examples/Lockscreen',
-                meta: { title: 'Lockscreen', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'lockscreen', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'pace',
                 name: 'Pace',
                 component: 'views/examples/Pace',
-                meta: {  title: 'Pace', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: {  title: 'pace', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: '404',
                 name: 'Error404',
                 component: 'views/examples/error404',
-                meta: { title: 'Error 404', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'error404', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: '500',
                 name: 'Error500',
                 component: 'views/examples/error500',
-                meta: { title: 'Error 500', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'error500', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'blank',
                 name: 'Blank',
                 component: 'views/examples/Blank',
-                meta: { title: 'Blank Page', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'blank', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'starter',
                 name: 'Starter',
                 component: 'views/examples/StartPage',
-                meta: { title: 'Starter Page', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'starter', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
 
 
@@ -471,37 +470,37 @@ export const asyncRoutes = [
         name: 'Components',
         redirect: 'noRedirect',
         component: 'layout/Layout',
-        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'Components', icon: 'fas fa-puzzle-piece' },
+        meta: { title: 'components', bodyClass: 'sidebar-mini layout-fixed', icon: 'fas fa-puzzle-piece' },
         children: [
             {
                 path: 'sticky',
                 name: 'Sticky',
                 component: 'views/components/Sticky',
-                meta: { title: 'Sticky', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
+                meta: { title: 'sticky', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
             },
             {
-                path: 'sticky2navBar',
+                path: 'sticky-navbar',
                 name: 'StickyNavbar',
                 component: 'views/components/Sticky',
-                meta: { title: 'Sticky to NavBar', bodyClass: 'layout-navbar-fixed', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: {  title: 'stickyNav', bodyClass: 'layout-navbar-fixed', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
-                path: 'sticky2screen',
+                path: 'sticky-screen',
                 name: 'StickyScreen',
                 component: 'views/components/Sticky',
-                meta: { title: 'Sticky to screen', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                meta: { title: 'stickyScreen', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'error-logs',
                 name: 'ErrorLogs',
-                component: () => '/views/components/errorLog/index.vue',
-                meta: { title: 'Error Logs', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                component: 'views/components/errorLog/index.vue',
+                meta: { title: 'errorLogs', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'json-editor',
                 name: 'JsonEditor',
-                component: () => '/views/components/json-editor/index.vue',
-                meta: { title: 'JSON Editor', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                component: 'views/components/json-editor/index.vue',
+                meta: { title: 'jsonEditor', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
         ]
     },
@@ -510,38 +509,38 @@ export const asyncRoutes = [
         name: 'Api',
         redirect: 'noRedirect',
         component: 'layout/Layout',
-        meta:{ bodyClass: 'sidebar-mini layout-fixed', title: 'API', icon: 'fab fa-adn' },
+        meta:{ bodyClass: 'sidebar-mini layout-fixed', title: 'api', icon: 'fab fa-adn' },
         children: [
             {
                 path: 'api-example',
                 name: 'ApiExample1',
-                component: 'views/Api/APIExample1',
-                meta: { title: 'API Example 1', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                component: 'views/examples/APIExample',
+                meta: { title: 'apiExample1', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'api-example-2',
                 name: 'ApiExample2',
-                component: 'views/Api/APIExample2',
-                meta: { title: 'API Example 2', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+                component: 'views/examples/APIFaker',
+                meta: { title: 'apiExample2', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
             },
             {
                 path: 'api-proxy',
                 name: 'ApiProxy',
                 component: 'views/Api/APIProxy',
-                meta: { title: 'API Proxy', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
-            },
+                meta: { title: 'apiProxy', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+            }
         ]
     },
     {
         path: '/header/misc',
-        meta: { title: 'MISCELLANEOUS' }
+        meta: { title: 'miscellaneous' }
     },
     {
         path: '/external-link/admin-lte',
         children: [
             {
                 path: 'https://github.com/ColorlibHQ/AdminLTE/releases',
-                meta: { title: 'Github Repository', icon: 'far fa-star' }
+                meta: { title: 'githubRepo', icon: 'far fa-star' }
             }
         ]
     },
@@ -550,86 +549,96 @@ export const asyncRoutes = [
         name: 'Links',
         component: 'layout/Layout',
         redirect: 'noRedirect',
-        meta: {bodyClass: 'sidebar-mini', title: 'Dependencies', icon: 'nav-icon fas fa-handshake' },
+        meta: {bodyClass: 'sidebar-mini', title: 'dependencies', icon: 'nav-icon fas fa-handshake' },
         children: [
             {
                 path: 'https://vuejs.org/v2/api/',
-                meta: { title: 'Vue Api', icon: 'fab fa-vuejs' }
+                meta: { title: 'vueApi', icon: 'fab fa-vuejs' }
             },
             {
                 path: 'https://adminlte.io/docs/3.0/index.html',
-                meta: { title: 'AdminLTE Docs', icon: 'fa fa-file' }
+                meta: { title: 'adminLteDocs', icon: 'fa fa-file' }
             },
             {
                 path: 'https://element.eleme.io/#/en-US/component/installation',
-                meta: { title: ' Element UI', icon: 'fab fa-etsy' }
+                meta: { title: 'elementUi', icon: 'fab fa-etsy' }
             },
             {
                 path: 'https://miragejs.com/tutorial/intro/',
-                meta: { title: 'Mirage', icon: 'fas fa-mountain' }
+                meta: { title: 'mirage', icon: 'fas fa-mountain' }
             },
             {
                 path: 'https://panjiachen.github.io/vue-element-admin-site/guide/essentials/router-and-nav.html',
-                meta: { title: 'router & nav', icon: 'fab fa-vimeo-v'}
+                meta: { title: 'routerNav', icon: 'fab fa-vimeo-v'}
             },
             {
                 path: 'https://jasonwatmore.com/post/2018/07/14/vue-vuex-user-registration-and-login-tutorial-example',
-                meta: { title: 'login & register', icon: 'fas fa-registered'}
+                meta: { title: 'loginRegister', icon: 'fas fa-registered'}
             },
             {
                 path: 'https://fusejs.io/examples.html#extended-searc',
-                meta: { title: 'Search - examples', icon: 'fas fa-search'}
+                meta: { title: 'searchExamples', icon: 'fas fa-search'}
             },
+            {
+                path: 'https://kazupon.github.io/vue-i18n/',
+                meta: { title: 'I18n', icon: 'fas fa-globe'}
+            }
         ]
+    },
+    {
+        path: '/header/multi',
+        meta: { title: 'multiLevelExample' }
     },
     {
         path: '/nested',
         name: 'Nested',
         component: 'layout/Layout',
         redirect: 'noRedirect',
-        meta: { title: 'Nested Routes', bodyClass: 'sidebar-mini layout-fixed', icon: 'fas fa-ethernet' },
+        meta: { bodyClass: 'sidebar-mini layout-fixed', title: 'nestedRoutes', icon: 'fas fa-ethernet' },
         children: [
             {
                 path: 'menu1',
                 component: 'views/nested/menu1/index',
-                meta: { title: 'Menu 1 ' , icon: 'far fa-circle', iconActive: 'far fa-dot-circle'}
+                name: 'Menu1',
+                meta: { title: 'menu1' , icon: 'far fa-circle', iconActive: 'far fa-dot-circle'}
             },
             {
                 path: '/nested/menu2',
                 component: 'views/examples/Blank',
+                name: 'Menu2',
                 redirect: 'noRedirect',
-                meta: { title: 'Menu 2', icon: 'far fa-hand-point-right'},
+                meta: { title: 'menu2', icon: 'far fa-hand-point-right'},
                 children: [
                     {
                         path: 'menu2-1',
                         component: 'views/examples/Blank',
                         name: 'Menu2-1',
-                        meta: { title: 'Menu 2-1', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
+                        meta: { title: 'menu2-1', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
                     },
                     {
                         path: '/nested/menu2/menu2-2',
                         component: 'views/examples/Blank',
                         redirect: 'noRedirect',
                         name: 'Menu2-2',
-                        meta: { title: 'Menu 2-2' , icon: 'far fa-hand-point-right'},
+                        meta: { title: 'menu2-2' , icon: 'far fa-hand-point-right'},
                         children: [
                             {
                                 path: 'menu2-2-1',
                                 component: 'views/examples/Blank',
                                 name: 'Menu2-2-1',
-                                meta: { title: 'Menu 2-2-1' , icon: 'fas fa-circle', iconActive: 'far fa-dot-circle' }
+                                meta: { title: 'menu2-2-1' , icon: 'fas fa-circle', iconActive: 'far fa-dot-circle' }
                             },
                             {
                                 path: 'menu2-2-2',
                                 component: 'views/examples/Blank',
                                 name: 'Menu2-2-2',
-                                meta: { title: 'Menu 2-2-2' , icon: 'fas fa-circle', iconActive: 'far fa-dot-circle' }
+                                meta: { title: 'menu2-2-2' , icon: 'fas fa-circle', iconActive: 'far fa-dot-circle' }
                             },
                             {
                                 path: 'menu2-2-3',
                                 component: 'views/examples/Blank',
                                 name: 'Menu2-2-3',
-                                meta: { title: 'Menu 2-2-3' , icon: 'fas fa-circle', iconActive: 'far fa-dot-circle' }
+                                meta: { title: 'menu2-2-3' , icon: 'fas fa-circle', iconActive: 'far fa-dot-circle' }
                             }
                         ]
                     },
@@ -637,7 +646,7 @@ export const asyncRoutes = [
                         path: 'menu2-3',
                         component: 'views/examples/Blank',
                         name: 'Menu2-3',
-                        meta: { title: 'Menu 2-3', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
+                        meta: { title: 'menu2-3', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
                     }
                 ]
             },
@@ -645,25 +654,25 @@ export const asyncRoutes = [
                 path: 'menu3',
                 component: 'views/examples/Blank',
                 name: 'Menu3',
-                meta: { title: 'Menu 3', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
+                meta: { title: 'menu3', icon: 'far fa-circle', iconActive: 'far fa-dot-circle'  }
             }
         ]
     },
     {
         path: '/header/labels',
-        meta: { title: 'LABELS' }
+        meta: { title: 'labels' }
     },
     {
         path: '/label/important',
-        meta: { title: 'Important', icon: 'far fa-circle text-danger'}
+        meta: { title: 'important', icon: 'far fa-circle text-danger'}
     },
     {
         path: '/label/warning',
-        meta: { title: 'Warning', icon: 'far fa-circle text-warning'}
+        meta: { title: 'warning', icon: 'far fa-circle text-warning'}
     },
     {
         path: '/label/info',
-        meta: { title: 'Info', icon: 'far fa-circle text-info'}
+        meta: { title: 'info', icon: 'far fa-circle text-info'}
     },
 
     { path: '*', redirect: '/404', hidden: true }

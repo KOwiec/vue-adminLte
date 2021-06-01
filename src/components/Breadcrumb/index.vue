@@ -7,10 +7,10 @@
             <el-breadcrumb-item v-for="(item,index) in levelList" :key="item.path">
                 <span v-if="item.redirect === 'noRedirect' || index === levelList.length-1"
                       class="no-redirect">
-                    {{ item.meta.title }}
+                    {{ generateTitle(item.meta.title) }}
                 </span>
                 <a v-else @click.prevent="handleLink(item)">
-                    {{ item.meta.title }}
+                    {{ generateTitle(item.meta.title) }}
                 </a>
             </el-breadcrumb-item>
          </transition-group>
@@ -20,6 +20,7 @@
 
 <script>
     import pathToRegexp from 'path-to-regexp'
+    import { generateTitle } from '@/utils/i18n'
 
     export default {
         name: "Breadcrumb",
@@ -44,13 +45,14 @@
             this.getBreadcrumb()
         },
         methods: {
+            generateTitle,
             getBreadcrumb() {
                 // only show routes with meta.title
                 let matched = this.$route.matched.filter(item => item.meta && item.meta.title);
                 const first = matched[0];
 
                 if (!this.isDashboard(first)) {
-                    matched = [{ path: '/dashboards', meta: { title: 'Dashboards' }}].concat(matched)
+                    matched = [{ path: '/dashboards', meta: { title: this.$t('route.dashboards') }}].concat(matched)
 
                 }
 
@@ -65,7 +67,6 @@
                 return name.trim().toLocaleLowerCase() === 'Dashboards'.toLocaleLowerCase()
             },
             pathCompile(path) {
-                // To solve this problem https://github.com/PanJiaChen/vue-element-admin/issues/561
                 const { params } = this.$route;
                 var toPath = pathToRegexp.compile(path);
                 return toPath(params)

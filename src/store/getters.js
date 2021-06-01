@@ -28,6 +28,8 @@ const getters = {
   // application
     sidebar: state => state.app.sidebar,
     controlSidebar: state => state.app.controlSidebar,
+    language: state => state.app.language,
+    size: state => state.app.size,
   // alert
     alertSimple: state => state.alert,
   // All notifications, we are returning only the raw notification objects

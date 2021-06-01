@@ -67,6 +67,7 @@ export default {
       api: 'API',
       apiExample1: 'API Example 1',
       apiExample2: 'API Example 2',
+      apiProxy: 'API Proxy',
       miscellaneous: 'MISCELLANEOUS',
       githubRepo: 'Github Repository',
       dependencies: 'Dependencies',

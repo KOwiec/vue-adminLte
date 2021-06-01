@@ -4,19 +4,19 @@ const tablesRouter = {
     name: 'Tables',
     redirect: '/tables/simple-table',
     component: Layout,
-    meta:{ title: 'Tables', bodyClass: 'sidebar-mini layout-fixed', icon: 'fa fa-table' },
+    meta:{ title: 'tables', bodyClass: 'sidebar-mini layout-fixed', icon: 'fa fa-table' },
     children: [
         {
             path: 'simple-table',
             name: 'SimpleTable',
             component: () => import('@/views/tables/Simple'),
-            meta: { title: 'Simple Tables', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+            meta: { title: 'simpleTable', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
         },
         {
             path: 'data-table',
             name: 'DataTable',
             component: () => import('@/views/tables/Data'),
-            meta: { title: 'Data Tables', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
+            meta: { title: 'dataTable', icon: 'far fa-circle', iconActive: 'far fa-dot-circle' }
         },
         {
             path: 'jsgrid-table',

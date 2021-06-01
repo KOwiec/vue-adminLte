@@ -1,7 +1,7 @@
 <template>
     <va-nav-dropdown
             id="MainDropdownMenu"
-            :title="title"
+            :title="$t('navbar.main')"
             :isTooltip="false"
             navColor="info"
             :is-toggle="true">
@@ -54,7 +54,6 @@
                         text: 'Docs 3.0'
                     }
                 ],
-                title: 'Main'
             }
         },
         computed: {

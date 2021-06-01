@@ -3,7 +3,7 @@
            class="nav-header"
            :style="headerStyle">
 
-        {{item.meta.title}}
+        {{generateTitle(item.meta.title)}}
     </li>
 
     <li v-else-if="!showLabel"
@@ -22,7 +22,7 @@
                 v-if="rootMenu.collapse && item.meta && item.meta.title && rootMenu.showTooltip"
                 effect="dark"
                 placement="right"
-                :content="item.meta.title"
+                :content="generateTitle(item.meta.title)"
         >
                 <div>
                     <slot></slot>
@@ -38,12 +38,11 @@
     import { isHeader, isLabel } from '@/utils/validate'
     import Menu from './menu-mixin';
     import Emitter from '@/mixins/emitter-mixin';
-    //import waves from '@/directives/waves/index.js' //  and <li v-else-if="!showLabel" v-waves> to check
+    import { generateTitle } from '@/utils/i18n'
 
     export default {
         name: "MenuItem",
         componentName: 'MenuItem',
-        //directives: { waves },
         mixins: [Menu, Emitter],
         props: {
             index: {
@@ -94,6 +93,7 @@
             }
         },
         methods: {
+            generateTitle,
             handleClick() {
                     this.dispatch( 'Menu', 'item-click', this);
                     this.$emit('click', this);
