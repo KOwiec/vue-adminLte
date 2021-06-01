@@ -27,6 +27,7 @@
     "vue",
     "adminLTE",
     "element-ui",
+    "dashboard",
     "mirage",
     "admin-panel",
     "admin-template"
