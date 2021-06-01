@@ -73,7 +73,7 @@ module.exports = {
     msgDropdownMenu: true,
     noteDropdownMenu: true,
     userDropdownMenu: true,
-    languagesDrobdownMenu: false,
+    languagesDrobdownMenu: true,
     screenfull: true,
 
     /**

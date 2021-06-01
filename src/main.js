@@ -13,6 +13,8 @@ import '../BACKEND-fake'        // fake api data system - in production simply r
 import '@/components'            // vue-adminlte components
 import '@/components/ElementUI'  // ElementUI components
 
+import i18n from './lang' // internationalization
+
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue';    // scroll bars vue
 Vue.component('overlay-scrollbars', OverlayScrollbarsComponent);  // global registration component
 // control-sidebar & sidebar use Overlay Scrollbars from AdminLTE (see: src\layout\components\NaviBar\RightNavbar.vue for control sidebar)
@@ -47,6 +49,7 @@ new Vue({
     el: '#app',
     router,
     store,
+    i18n,
     render: h => h(App)
 })
 
