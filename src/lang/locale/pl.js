@@ -99,18 +99,18 @@ export default {
     navbar: {
         toggleSidebar: 'przełącz Sidebar',
         main: 'Główny',
-        dashboardV1: 'Dashboard v.1',
-        dashboardV2: 'Dashboard v.2',
+        dashboardV1: 'Panel v.1',
+        dashboardV2: 'Panel v.2',
         github: 'Github',
-        docs2: 'Docs 2.4',
-        docs3: 'Docs 3.0',
+        docs2: 'Dok. 2.4',
+        docs3: 'Dok. 3.0',
         logOut: 'Log Out',
-        messages: 'messages',
-        notifications: 'notifications',
+        messages: 'wiadomości',
+        notifications: 'powiadomienia',
         lang: 'język',
-        profile: 'profile',
-        fullScreen: 'Full screen',
-        toggleControlSidebar: 'toggle Control Sidebar'
+        profile: 'profil',
+        fullScreen: 'Pełny ekran',
+        toggleControlSidebar: 'przełącz Control Sidebar'
     },
     login: {
         text: 'Zaloguj się aby rozpocząć sesję',
@@ -120,7 +120,7 @@ export default {
         logIn: 'Zaloguj się',
         alert: {
             title: 'Uwaga!',
-            text: 'ZAREJESTRUJ urzytkownika w \'auth-fake\' serwisie tego szablonu, ALBO użyj loginu: "admin" ORAZ hasła: "admin1"',
+            text: 'ZAREJESTRUJ użytkownika w \'auth-fake\' serwisie tego szablonu, ALBO użyj loginu: "admin" ORAZ hasła: "admin1"',
             checkLabel: 'Nie pokazuj więcej'
         }
     },

@@ -1,23 +1,22 @@
 <template>
     <transition name="fade" mode="out-in">
-     <div class="login-page">
+     <div class="login-page" >
        <div class="login-box">
            <!-- simple alert for login error -->
            <div v-if="loginError" id="loginErrorAlert" :class="`alert alert-${alertSimple.type}`">{{alertSimple.message}}</div>
            <!-- alert info component  ------------->
            <va-alert v-if="showLoginInfo"
-                  id="loginInfoAlert"
+                  id="loginAlert"
                   :type="alert.type"
                   :dismissible="true"
                   @alert-btn-click="closeLoginInfo">
-               <h5 slot="header"><i :class="alert.icon"></i> {{alert.title}} </h5>
+               <h5 slot="header"><i :class="alert.icon"></i> {{ $t('login.alert.title') }} </h5>
                <div slot="body">
-                   <div v-if="alert.note.html" v-html="alert.note.html"></div>
-                   <div v-else>{{alert.note}}</div>
+                   <div >{{ $t('login.alert.text')}}</div>
                    <div class="form-group">
                        <div class="custom-control custom-checkbox">
                            <input class="custom-control-input" type="checkbox" id="loginCheckbox1" @change="changeHandler" :value="isCheckedAlert"><br/>
-                           <label for="loginCheckbox1" class="custom-control-label">Don't show me again</label>
+                           <label for="loginCheckbox1" class="custom-control-label">{{ $t('login.alert.checkLabel') }}</label>
                        </div>
                    </div>
                </div>
@@ -29,9 +28,18 @@
 
           <div class="card">
             <div class="card-body login-card-body">
-
-                <p class="login-box-msg">Sign in to start your session</p>
-
+                <!-- Language Dropdown Menu -->
+                <div class="row">
+                    <div class="col-2">
+                        <ul class="navbar-nav ml-auto">
+                            <lang-select style="padding-left: 30px" icon="fas fa-globe fa-2x"/>
+                        </ul>
+                    </div>
+                    <div class="col-8">
+                        <p class="login-box-msg">{{ $t('login.text')}}</p>
+                    </div>
+                </div>
+                <!-- Login form -->
                 <form ref="loginForm" class="login" @submit.prevent="handleLogin" @keyup.enter="handleLogin">
                     <div class="input-group mb-3">
                         <input v-model.trim="username"
@@ -40,7 +48,7 @@
                                type="text"
                                name="username"
                                class="form-control" :class="{ 'is-invalid': submitted && errors.has('username') }"
-                               placeholder="Username">
+                               :placeholder="$t('login.username')">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                <span class="fas fa-user"></span>
@@ -55,7 +63,7 @@
                                :type="passwordType"
                                name="password"
                                class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }"
-                               placeholder="Password">
+                               :placeholder="$t('login.password')">
                         <div class="input-group-append input-group-text">
                            <a href="javascript:void(0);" @click="showPwd">
 
@@ -68,19 +76,19 @@
                     <div class="row">
                         <div class="col-4">
                             <!-- optional Remember user- not implemented yet
-                            <div class="icheck-primary">
+                            <div class="custom-control">
                                 <input type="checkbox" id="remember" v-model="remember">
                                 <label for="remember">
-                                    Remember
+                                    Remember Me
                                 </label>
-                            </div>---->
+                            </div>--->
                         </div>
                         <div class="col-3" :style="{'text-align': 'center'}">
                             <i v-show="loggingIn" class="el-icon-loading" :style="{ 'font-size': '33px' }"></i>
                         </div>
 
                         <div class="col-5">
-                            <button type="submit" class="btn btn-primary btn-block" :disabled="loggingIn">Login</button>
+                            <button type="submit" class="btn btn-primary btn-block" :disabled="loggingIn">{{$t('login.logIn')}}</button>
                         </div>
                     </div>
                 </form>
@@ -89,21 +97,21 @@
 
                 <div class="row">
                     <div class="col-8">
-                        <va-check-box
-                                v-model="showLinks"
-                                checkClass="custom-control"
-                                id="socialLinksCheckbox">
-                            Social Links
-                        </va-check-box>
+                       <va-check-box
+                              v-model="showLinks"
+                              checkClass="custom-control"
+                              id="socialLinksCheckbox">
+                          Social Links
+                       </va-check-box>
                     </div>
                 </div><br/>
-                <!-- forgot-password- not implemented yet
+                <!-- forgot-password - not implemented yet
                 <p class="mb-1">
                     <a href="javascript:void(0);" class="text-center" @click="goToForgot">I forgot my password</a>
                 </p>
                 -->
                 <p class="mb-0">
-                    <a href="javascript:void(0);" class="text-center" @click="goToRegister">Register a new membership</a>
+                    <a href="javascript:void(0);" class="text-center" @click="goToRegister">{{$t('login.register')}}</a>
                 </p>
             </div>
         </div>
@@ -128,7 +136,7 @@
                 // login card
                 username: '',
                 password: '',
-                //remember: false,
+                remember: false,
                 submitted: false,
                 passwordType: 'password',
                 redirect: undefined,
@@ -147,15 +155,15 @@
             }
         },
         mounted() {
-            // option
-            //if (this.username === '') {
-            //    this.$refs.username.focus()
-            //} else if (this.password === '') {
-            //    this.$refs.password.focus()
-            //}
+           // option
+           // if (this.username === '') {
+           //     this.$refs.username.focus()
+           // } else if (this.password === '') {
+           //     this.$refs.password.focus()
+           // }
         },
         computed: {
-            ...mapGetters([ 'notifications', 'alertSimple' ]),
+            ...mapGetters([ 'notifications', 'alertSimple', 'language' ]),
             loggingIn () {
                 return this.$store.getters.isloggingIn;
             },
@@ -259,10 +267,7 @@
                         cname: this.cname,
                         type: 'info',
                         icon:'icon fa fa-info',
-                        title: 'Note!',
-                        note: { html: `<span>REGISTER User in auth-fake service in this App, OR use default username: "admin" <br> AND password: "admin1"</span>`
-                        }
-                    }).then ( this.getAlert() );
+                    }).then ( this.getAlert())
                     return this.alert.show;
                 }
             },
@@ -279,6 +284,7 @@
         }
     }
 </script>
+
 
 
 

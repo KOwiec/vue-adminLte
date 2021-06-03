@@ -1,14 +1,14 @@
 <template>
     <transition name="fade" mode="out-in">
-        <div class="social-auth-links text-center mb-3">
-            <p>- OR -</p>
-            <a href="javascript:void(0);"  @click="facebookHandleClick('facebook')" class="btn btn-block btn-primary">
-                <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-            </a>
-            <a href="javascript:void(0);"  @click="googleHandleClick('googlePlus')" class="btn btn-block btn-danger">
-                <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-            </a>
-        </div>
+      <div class="social-auth-links text-center mb-3">
+          <p>{{ $t('socialLinks.pTag') }}</p>
+          <a href="javascript:void(0);"  @click="facebookHandleClick('facebook')" class="btn btn-block btn-primary">
+              <i class="fab fa-facebook mr-2"></i> {{ $t('socialLinks.facebook') }}
+          </a>
+          <a href="javascript:void(0);"  @click="googleHandleClick('googlePlus')" class="btn btn-block btn-danger">
+              <i class="fab fa-google-plus mr-2"></i> {{ $t('socialLinks.googlePlus') }}
+          </a>
+      </div>
     </transition>
 </template>
 

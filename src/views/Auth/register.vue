@@ -1,10 +1,9 @@
 <template>
     <transition name="fade" mode="out-in">
-        <div class="login-page">
+        <div class="register-page">
           <div class="register-box">
-
               <!-- simple alert for register error -->
-             <div v-if="registerError" id="registerErrorAlert" :class="`alert alert-${alertSimple.type}`">{{alertSimple.message}}</div>
+             <div v-if="registerError" :class="`alert alert-${alertSimple.type}`">{{alertSimple.message}}</div>
 
              <div class="register-logo">
                  <a href="javascript:void(0);">Vue-<b>Admin</b>LTE</a>
@@ -12,11 +11,16 @@
 
              <div class="card">
                 <div class="card-body register-card-body">
-                    <p class="login-box-msg">Register a new membership</p>
+                    <p class="login-box-msg">{{$t('register.text')}}</p>
 
                     <form @submit.prevent="handleRegister" @keyup.enter="handleRegister">
                         <div class="input-group mb-3">
-                            <input type="text" v-model="user.firstName" v-validate="'required'" ref="firstName" name="firstName" placeholder="First Name"
+                            <input type="text"
+                                   v-model="user.firstName"
+                                   v-validate="'required'"
+                                   ref="firstName"
+                                   name="firstName"
+                                   :placeholder="$t('register.firstName')"
                                    class="form-control" :class="{ 'is-invalid': submitted && errors.has('firstName') }">
                             <div class="input-group-append">
                                 <div class="input-group-text">
@@ -27,7 +31,12 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text" v-model="user.lastName" v-validate="'required'" ref="lastName" name="lastName" placeholder="Last Name"
+                            <input type="text"
+                                   v-model="user.lastName"
+                                   v-validate="'required'"
+                                   ref="lastName"
+                                   name="lastName"
+                                   :placeholder="$t('register.lastName')"
                                    class="form-control" :class="{ 'is-invalid': submitted && errors.has('lastName') }">
                             <div class="input-group-append">
                                 <div class="input-group-text">
@@ -38,7 +47,12 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="text"  v-model="user.username" v-validate="'required'" ref="username" name="username" placeholder="Username"
+                            <input type="text"
+                                   v-model="user.username"
+                                   v-validate="'required'"
+                                   ref="username"
+                                   name="username"
+                                   :placeholder="$t('register.username')"
                                    class="form-control" :class="{ 'is-invalid': submitted && errors.has('username') }">
                             <div class="input-group-append">
                                 <div class="input-group-text">
@@ -49,7 +63,12 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <input type="email" v-model="user.email" v-validate="'required|email'" ref="email" name="email" placeholder="Email"
+                            <input type="email"
+                                   v-model="user.email"
+                                   v-validate="'required|email'"
+                                   ref="email"
+                                   name="email"
+                                   :placeholder="$t('register.email')"
                                    class="form-control" :class="{ 'is-invalid': submitted && errors.has('email') }">
                             <div class="input-group-append">
                                 <div class="input-group-text">
@@ -65,7 +84,7 @@
                                    v-model.trim="user.password"
                                    v-validate="{ required: true, min: 6, is: confirmPassword }"
                                    name="password"
-                                   placeholder="Password"
+                                   :placeholder="$t('register.password')"
                                    class="form-control" :class="{ 'is-invalid': submitted && errors.has('password') }">
                             <div class="input-group-append">
                                 <div class="input-group-text">
@@ -82,7 +101,7 @@
                                    v-model.trim="confirmPassword"
                                    v-validate="{ required: true }"
                                    name="confirmed"
-                                   placeholder="Retype password"
+                                   :placeholder="$t('register.retype')"
                                    class="form-control" :class="{ 'is-invalid': submitted && errors.has('confirmed') }">
                             <div class="input-group-append input-group-text">
                                 <a href="javascript:void(0);" @click="showPwd">
@@ -108,7 +127,7 @@
                             </div>
                             <div class="col-5">
                                 <button type="submit" class="btn btn-primary btn-block" :disabled="registering">
-                                    Register
+                                    {{$t('register.register')}}
                                 </button>
                             </div>
                         </div>
@@ -127,10 +146,12 @@
                         </div>
                     </div><br/>
 
-                    <a href="javascript:void(0);" class="text-center" @click="goToLogin">I already have a membership</a>
+                    <a href="javascript:void(0);" class="text-center" @click="goToLogin">{{$t('register.toLogin')}}</a>
                 </div>
             </div>
           </div>
+            <br/>
+            <br/>
         </div>
     </transition>
 
@@ -178,16 +199,6 @@
             ...mapActions({
                 clearAlert: 'alert/clear'
             }),
-
-            clearData () {
-                this.user.firstName = '';
-                this.user.username = '';
-                this.user.lastName = '';
-                this.user.password = '';
-                this.user.email = '';
-                this.confirmPassword = ''
-            },
-
             goToLogin () {
                 if (this.registerError ) {
                     // clear alert on location change
@@ -195,7 +206,6 @@
                 }
                 this.$router.push({ path:  '/login' })
             },
-
             handleRegister() {
                 this.submitted = true;
                 this.$validator.validate().then(valid => {
@@ -226,5 +236,4 @@
         }
     }
 </script>
-
 
