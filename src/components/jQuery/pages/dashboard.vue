@@ -6,10 +6,15 @@
 
 <script>
     // JQVMap
+    import "admin-lte/plugins/jqvmap/jqvmap.min.css"
     import 'admin-lte/plugins/jqvmap/jquery.vmap.js'
     //  JQVMap - maps
     import 'admin-lte/plugins/jqvmap/maps/jquery.vmap.usa.js'
     //import 'admin-lte/plugins/jqvmap/maps/jquery.vmap.world.js'
+
+    //morris (raphael.js is load in main.js)
+    import "@/libs/default/plugins/morris/morris.css"
+    import '@/libs/default/plugins/morris/morris.min.js'
 
     export default {
         mounted () {
@@ -363,7 +368,3 @@
         }
     }
 </script>
-
-<style scoped>
-    @import "~admin-lte/plugins/jqvmap/jqvmap.min.css";
-</style>

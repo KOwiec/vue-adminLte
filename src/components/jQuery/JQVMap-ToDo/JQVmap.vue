@@ -2,13 +2,14 @@
     <div v-if="loading" class="map"></div>
 
     <div v-else class="loading">
-        <img class="loader-img" src="/static/plugins/preloaders/35-1.gif">
+        <img class="loader-img" src="static/plugins/preloaders/35-1.gif">
     </div>
 </template>
 
 <script>
     //  TODO
     // JQVMap
+    import "admin-lte/plugins/jqvmap/jqvmap.min.css"
     import 'admin-lte/plugins/jqvmap/jquery.vmap.js'
     //  JQVMap - maps
    //import 'admin-lte/plugins/jqvmap/maps/jquery.vmap.usa.js'
@@ -39,7 +40,7 @@
 
         methods: {
            async renderMap () {
-                await this.$nextTick(function() {
+                await this.$nextTick(() => {
                     this.loading = true;
                     console.log('render start')
 
@@ -84,7 +85,7 @@
 </script>
 
 <style scoped>
-    @import "~admin-lte/plugins/jqvmap/jqvmap.min.css";
+
     .loading {
         position: absolute;
         background-color: transparent;

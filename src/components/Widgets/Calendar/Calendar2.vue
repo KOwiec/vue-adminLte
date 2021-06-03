@@ -35,7 +35,7 @@
             $('#calendar').datetimepicker({
                 inline: true,
                 format: 'L',
-                //sideBySide: true
+                sideBySide: true
             })
         }
     }

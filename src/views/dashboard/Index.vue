@@ -125,7 +125,7 @@
                                <i class="far fa-calendar-alt"></i>
                            </button>
                            <div slot="content">
-                               <div id="world-map" style="height: 250px; width: 100%;"></div>
+                               <div id="world-map" style="height: 250px; width: 100%; overflow: hidden;"></div>
                            </div>
                            <div slot="footer" class="row">
                                <div class="col-4 text-center">
@@ -199,12 +199,9 @@
 
 <script>
     import ContentHeader from '@/layout/components/Content/ContentHeader.vue'
-    import Calendar from '@/components/Widgets/Calendar/Calendar2.vue'            // Calendar.vue
+    import Calendar from '@/components/Widgets/Calendar/Calendar2.vue'            // OR - Calendar.vue
     import TodoList from '@/components/Widgets/TodoList/index.vue'
     import Dashboard from '@/components/jQuery/pages/dashboard.vue'
-
-    //morris (raphael.js is load in main.js)
-    import '@/libs/default/plugins/morris/morris.min.js'
 
     export default {
         name: "DashboardV1",

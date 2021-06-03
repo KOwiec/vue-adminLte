@@ -6,6 +6,7 @@
 
 <script>
     // jvectormap
+    import '@/libs/default/plugins/jquery-jvectormap-2.0.5/jquery-jvectormap-2.0.5.css'
     import '@/libs/default/plugins/jquery-jvectormap-2.0.5/jquery-jvectormap-2.0.5.min.js'
     // jvectormap - world
     import '@/libs/default/plugins/jquery-jvectormap-2.0.5/jquery-jvectormap-world-mill.js'
@@ -244,7 +245,7 @@
 
         beforeDestroy () {
            //var mapObj = $('#world-map-markers').vectorMap('get','mapObject');
-           //mapObj.remove();
+           $('#world-map-markers').remove();
         }
     }
 </script>
