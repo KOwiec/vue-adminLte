@@ -176,7 +176,7 @@
                               <div class="d-md-flex">
                                   <div class="p-1 flex-fill" style="overflow: hidden">
                                       <!-- Map will be created here -->
-                                      <div id="world-map-markers" style="height: 325px; overflow: hidden"></div>
+                                      <div id="world-map-markers" style="height: 325px; overflow: hidden;"></div>
                                   </div>
                                   <div class="card-pane-right bg-success pt-2 pb-2 pl-4 pr-4">
                                       <div class="description-block mb-4">

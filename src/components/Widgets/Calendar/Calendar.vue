@@ -41,6 +41,7 @@
 
 <script>
     //datepicker for calendar
+    import "@/libs/default/plugins/fullcalendar/fullcalendar.min.css" // fullCalendar 2.2.5 (Calendar.vue)
     import '@/libs/default/plugins/datepicker/bootstrap-datepicker.js'
 
     export default {

@@ -4,6 +4,7 @@
 
 <script>
     //bootstrap time picker
+    import "@/libs/default/plugins/timepicker/bootstrap-timepicker.min.css" // Bootstrap time Picker
     import '@/libs/default/plugins/timepicker/bootstrap-timepicker.min.js'
     export default {
         name: "TimePicker",
